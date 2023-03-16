@@ -1,0 +1,3 @@
+docker run -p 8069:8069 -v /System/Volumes/Data/sgoinfre/goinfre/Perso/aroca-pa/odoo:/var/lib/odoo -v /System/Volumes/Data/sgoinfre/goinfre/Perso/aroca-pa/odoo:/etc/odoo -v /System/Volumes/Data/sgoinfre/goinfre/Perso/aroca-pa/odoo:/mnt/extra-addons --name odootest -d odoo:latest
+
+docker run -p 5432:5432 -e POSTGRES_DB=postgres -e POSTGRES_PASSWORD=odoo -e POSGRES_USER=odoo -e PGDATA=/var/lib/postgresql/data/pgdata  -v /System/Volumes/Data/sgoinfre/goinfre/Perso/aroca-pa/odoo/odoo-db-data:/var/lib/postgresql/data --name postgrestest -d  postgres:alpine3.17
